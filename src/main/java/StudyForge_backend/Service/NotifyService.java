@@ -55,7 +55,7 @@ public class NotifyService {
             System.out.println("Your OTP has been sent.");
         }
         catch (Exception e){
-            throw new RuntimeException("Error sending OTP");
+            throw new RuntimeException("Error sending OTP"+  e.getMessage());
         }
     }
 
