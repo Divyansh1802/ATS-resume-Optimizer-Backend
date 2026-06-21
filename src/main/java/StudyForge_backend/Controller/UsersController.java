@@ -68,12 +68,12 @@ public class UsersController {
     public ResponseEntity<?> logout(HttpServletResponse response){
 
             System.out.println("Request reached logout endpoint");
-            ResponseCookie cookie = ResponseCookie.from("jwt", "")
+            ResponseCookie cookie = ResponseCookie.from("jwt_ATSresume", "")
                     .httpOnly(true)
                     .path("/")
                     .maxAge(0)
-                    .secure(false)
-                    .sameSite("Lax")
+                    .secure(true)
+                    .sameSite("None")
                     .build();
             response.addHeader("Set-Cookie", cookie.toString());
             return ResponseEntity.ok("Logged out");
