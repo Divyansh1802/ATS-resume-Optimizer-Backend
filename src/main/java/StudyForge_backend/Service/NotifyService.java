@@ -44,7 +44,7 @@ public class NotifyService {
                 Please submit Email Id Verification OTP to process this request.\n
                 """ + "OTP: " + otp);
             message.setTo(email);
-            message.setSubject("STUDYFORGE - Notify Service");
+            message.setSubject("ATS resume optimizer - Notify Service");
             message.setFrom(sender);
 
             javaMailSender.send(message);
