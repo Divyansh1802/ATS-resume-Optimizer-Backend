@@ -2,7 +2,6 @@ package StudyForge_backend.Service;
 
 import StudyForge_backend.Model.Users;
 import StudyForge_backend.Repository.UsersRepository;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
@@ -23,7 +22,7 @@ public class NotifyService {
     @Value("${spring.mail.username}")
     private String sender;
 
-    @Transactional
+
     public void SendOtp(String email) {
         try{
             Users user = usersRepository.findByEmail(email);
