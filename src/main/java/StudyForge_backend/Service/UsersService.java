@@ -66,7 +66,7 @@ public class UsersService {
 
         if(cookies != null) {
             for (Cookie cookie : cookies) {
-                if ("jwt".equals(cookie.getName())) {
+                if ("jwt_ATSresume".equals(cookie.getName())) {
                     String token = cookie.getValue();
 
                     if (token != null && jwtUtils.validateJwtToken(token)) {
