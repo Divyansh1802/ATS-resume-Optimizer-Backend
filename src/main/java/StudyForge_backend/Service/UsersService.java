@@ -5,7 +5,6 @@ import StudyForge_backend.Repository.UsersRepository;
 import StudyForge_backend.Security.JwtUtils;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -18,7 +17,6 @@ public class UsersService {
     private final JwtUtils jwtUtils;
 
 
-    @Transactional
     public String verifyOTP(String email, String otp) throws Exception {
         try{
              if(email == null || otp == null){
@@ -43,7 +41,7 @@ public class UsersService {
         }
     }
 
-    @Transactional
+    
     public void getUserTokens(String email) throws Exception {
         if(email == null){
             System.out.println("email is null");
