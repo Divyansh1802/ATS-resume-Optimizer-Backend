@@ -30,6 +30,7 @@ public class NotifyService {
             if(user == null){
                 user = new Users();
                 user.setEmail(email);
+                user.setUserTokens(20);
             }
 
             SimpleMailMessage message = new SimpleMailMessage();
