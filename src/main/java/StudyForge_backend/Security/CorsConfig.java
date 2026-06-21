@@ -16,7 +16,7 @@ public class CorsConfig {
         CorsConfiguration configuration = new CorsConfiguration();
 
         configuration.setAllowedOrigins(
-                List.of("https://ats-resume-optimizer-frontend-49jogc8hy.vercel.app")
+                List.of("https://ats-resume-optimizer-frontend-5xnllchmc.vercel.app")
         );
         configuration.setAllowedMethods(
                 List.of("GET", "POST","OPTIONS")
