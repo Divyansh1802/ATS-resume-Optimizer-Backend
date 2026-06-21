@@ -49,7 +49,7 @@ public class OAuthSuccessHandler implements AuthenticationSuccessHandler {
 
         response.addCookie(cookie);
 
-        response.sendRedirect("https://ats-resume-optimizer-frontend-49jogc8hy.vercel.app");
+        response.sendRedirect("https://ats-resume-optimizer-frontend-5xnllchmc.vercel.app");
 
     }
 }
